@@ -4,6 +4,12 @@
     <h2>{{contadorPadre}}</h2>
     <button v-on:click="aumenta()">+</button>
     <button v-on:click="resta()">-</button>
+    <button v-on:click="multi()">*</button>
+    <button class="reset" @click="reset">Reset</button>
+    <br>
+    <p>La Cantidad de clicks totales es de <b>Suma</b> {{ sumar }}</p>
+    <p>La Cantidad de clicks totales es de <b>Resta</b> {{ restar }}</p>
+    <p>La Cantidad de clicks totales es de <b>Multiplicar</b> {{ multiplicar }}</p>
     <p><a href="https://www.linkedin.com/in/brunomentasti/">Bruno Mentasti</a> - Cómision 23345 - Vue.js </p>
   </div>
 </template>
@@ -12,15 +18,27 @@ export default {
   name: 'Contador',
   data() {
     return {
-      contadorPadre: 0
+      contadorPadre: 0,
+      sumar: 0,
+      restar: 0,
+      multiplicar: 0
     };
   },
   methods: {
     aumenta() {
-      this.contadorPadre++;
+      this.contadorPadre += 1;
+      this.sumar++;
     },
     resta() {
-      this.contadorPadre--;
+      this.contadorPadre -= 1;
+      this.restar++;
+    },
+    multi() {
+      this.contadorPadre *= 2;
+      this.multiplicar++;
+    },
+    reset() {
+      this.contadorPadre = 0;
     }
   }
 }
@@ -37,7 +55,6 @@ h2 {
   text-transform: uppercase;
 }
 p {
-  margin: 50px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 12px;
 }

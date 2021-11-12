@@ -37,6 +37,7 @@ h2 {
   text-transform: uppercase;
 }
 p {
+  margin: 50px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -48,7 +49,7 @@ button {
   background-color: limegreen;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -61,6 +62,4 @@ button {
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
-
 </style>

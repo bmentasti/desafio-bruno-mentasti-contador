@@ -10,6 +10,7 @@
     <p>La Cantidad de clicks totales es de <b>Suma</b> {{ sumar }}</p>
     <p>La Cantidad de clicks totales es de <b>Resta</b> {{ restar }}</p>
     <p>La Cantidad de clicks totales es de <b>Multiplicar</b> {{ multiplicar }}</p>
+    <p>La Cantidad de clicks totales {{ sumar+restar+multiplicar }}</p>
     <p><a href="https://www.linkedin.com/in/brunomentasti/">Bruno Mentasti</a> - Cómision 23345 - Vue.js </p>
   </div>
 </template>

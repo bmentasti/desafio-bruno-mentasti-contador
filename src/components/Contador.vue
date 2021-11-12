@@ -1,14 +1,29 @@
 <template>
-  <div class="new-component">
-    <h1>A New Component</h1>
-    <p>This is a text inside the NewComponent.</p>
+  <div class="contador">
+    <h1>Desafio Contador Coderhouse</h1>
+    <h2>{{contadorPadre}}</h2>
+    <button v-on:click="aumenta()">+</button>
+    <button v-on:click="resta()">-</button>
   </div>
 </template>
 <script>
 export default {
   name: 'Contador',
+  data() {
+    return {
+      contadorPadre: 0
+    };
+  },
+  methods: {
+    aumenta() {
+      this.contadorPadre++;
+    },
+    resta() {
+      this.contadorPadre--;
+    }
+  }
 }
 </script>
 <style>
-/* Your CSS goes here */
+
 </style>
